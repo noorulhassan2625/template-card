@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      .card {
+        display: flex;
+        align-items: center;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 700px;
+        width: 100%;
+      }
+
+      .pic-area{
+        border-right: 1px solid blue;
+        padding-right: 20px;
+      }
+
+      .fa{
+        color: blue;
+        margin-right: 5px;
+      }
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid blue;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .profile-pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .info {
+        margin-left: 20px;
+        flex-grow: 1;
+      }
+      
+      .info-name{
+        display: flex;
+      }
+      .info h2 {
+        font-size: 24px;
+        color: #0066ff;
+      }
+
+      .info h3 {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .info p {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 5px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .button {
+        padding: 10px 15px;
+        text-align: center;
+        font-size: 14px;
+        color: white;
+        background: #0066ff;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: background-color 0.3s;
+      }
+
+      .button:hover {
+        background-color: #0052cc;
+      }
+      .logo-box{
+        margin-left: auto;
+      }
+      .logo {
+        margin-top: 10px;
+        width: 120px;
+      }
+      .ac-link{
+        color: #555 !important;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+       
+      <div class="pic-area">
+        <div class="profile-pic">
+          <img src="/PersonImg.jpg" alt="Profile Picture" />
+        </div>
+      </div>
+
+      <div class="info">
+        <div class="info-name">
+            <div>
+                <h2>Janine Fulton</h2>
+                <h3>Managing Director</h3>
+            </div>
+            <div class="logo-box">
+                <a href="https://harmpreventionsolutions.com/" class="ac-link" target="_blank">
+                    <img src="/logo.png" width="120px" alt="Profile Picture" />
+                </a>
+            </div>
+        </div>
+        <p>
+            <strong><i class="fa fa-phone" aria-hidden="true"></i></strong>
+            <a href="https://wa.me/642040291403" class="ac-link" target="_blank" rel="noopener noreferrer">+64 2040 2914 03</a>
+          </p>
+        <p><strong><i class="fa fa-globe" aria-hidden="true"></i></strong>
+        <a href="https://harmpreventionsolutions.com/" class="ac-link" target="_blank">
+        HarmPreventionSolutions.com</a>
+        </p>
+        <p><strong><i class="fa fa-envelope" aria-hidden="true"></i></strong>
+            <a href="mailto:contact@harmprevention.com" class="ac-link" >
+                contact@harmprevention.com</p>
+            </a>
+        <p><strong><i class="fa fa-map-marker" aria-hidden="true"></i></i></strong>New Plymouth | Taranaki | New Zealand | 4371</p>
+        <div class="buttons">
+          <a href="http://www.linkedin.com/in/janinefulton" class="button">Connect here with Janine on LinkedIn</a>
+          <a href="https://outlook.office.com/bookwithme/user/a01e5adbc47f4d0c8d4780fc764be81c@harmpreventionsolutions.com/meetingtype/tzejMvxrkUmmEUsI0obH7Q2?anonymous&ep=mlink" class="button">Book a Meeting with Me</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
