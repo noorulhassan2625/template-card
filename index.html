@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile Card</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <title>Responsive Profile Card</title>
     <style>
       * {
         margin: 0;
@@ -15,22 +11,24 @@
         box-sizing: border-box;
         font-family: Arial, sans-serif;
       }
+
+      body {
+        background-color: #f4f4f9;
+        padding: 20px;
+      }
+
       .card {
         display: flex;
-        align-items: center;
+        flex-wrap: wrap;
         background: white;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         max-width: 700px;
         width: 100%;
+        margin: 0 auto;
       }
 
-     
-
-      .fa{
-        color: blue;
-      }
       .profile-pic {
         width: 120px;
         height: 120px;
@@ -51,32 +49,46 @@
         flex-grow: 1;
         border-left: 1px solid blue;
         padding-left: 20px;
+        flex-basis: 100%;
       }
-      
-      .info-name{
+
+      .info-name {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
       }
+
       .info h2 {
         font-size: 24px;
         color: blue;
       }
 
       .info h3 {
-        font-size: 18px;
+        font-size: 14px;
         color: #333;
         margin-bottom: 10px;
       }
 
       .info p {
         font-size: 14px;
-        color: #000000;
-        margin-bottom: 5px;
+        color: #000;
+        margin-bottom: 10px;
       }
-      .info p a{
+
+      .info p a {
         color: black !important;
+        text-decoration: none;
       }
+
+      .label {
+        font-weight: bold;
+        color: blue;
+      }
+
       .buttons {
         display: flex;
+        flex-wrap: wrap;
         gap: 10px;
         margin-top: 15px;
       }
@@ -95,59 +107,66 @@
       .button:hover {
         background-color: #0052cc;
       }
-      .logo-box{
-        margin-left: auto;
-      }
-      .logo {
+
+      .logo-box {
         margin-top: 10px;
+      }
+
+      .logo {
         width: 120px;
       }
-      .ac-link{
-        color: #555 !important;
-        text-decoration: none;
+
+      @media (max-width: 600px) {
+        .card {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .profile-pic {
+          margin-bottom: 20px;
+        }
+
+        .info {
+          border-left: none;
+          padding-left: 0;
+        }
+
+        .info-name {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .logo-box {
+          margin-top: 10px;
+        }
       }
     </style>
   </head>
   <body>
     <div class="card">
-       
-      <div class="pic-area">
-        <div class="profile-pic">
-          <img src="/PersonImg.jpg" alt="Profile Picture" />
-        </div>
+      <div class="profile-pic">
+        <img src="https://i.postimg.cc/0yn0Q7xp/Janine-01.jpg" alt="Profile Picture" />
       </div>
-
       <div class="info">
         <div class="info-name">
-            <div>
-                <h2>Janine Fulton</h2>
-                <h3>Managing Director</h3>
-            </div>
-            <div class="logo-box">
-                <a href="https://harmpreventionsolutions.com/" class="ac-link" target="_blank">
-                    <img src="/logo.png" width="120px" alt="Profile Picture" />
-                </a>
-            </div>
+          <div>
+            <h2>Janine Fulton</h2>
+            <h3>Managing Director</h3>
+          </div>
+          <div class="logo-box">
+            <a href="https://harmpreventionsolutions.com/" target="_blank">
+              <img src="https://i.postimg.cc/Xnf2mCMN/Untitled-3-01-1.png" class="logo" alt="Logo" />
+            </a>
+          </div>
         </div>
-        <p style="margin-bottom: 0px !important;">
-            <strong><i class="fa fa-phone" style="margin-right: 5px !important;" aria-hidden="true"></i></strong>
-            <a href="https://wa.me/642040291402" class="ac-link" style="margin-bottom: 0px !important;" target="_blank" rel="noopener noreferrer">+64 20 402 91402
-                <br>
-                <span style="font-size: 7px; margin-left: 25px; margin-top: -100px;">(Available on Whatsapp for International Calls)</span>
-            </a>
-          </p>
-        <p><strong><i class="fa fa-globe" style="margin-right: 5px !important;" aria-hidden="true"></i></strong>
-        <a href="https://harmpreventionsolutions.com/" class="ac-link" target="_blank">
-        HarmPreventionSolutions.com</a>
-        </p>
-        <p><strong><i class="fa fa-envelope" style="margin-right: 5px !important;" aria-hidden="true"></i></strong>
-            <a href="mailto:contact@harmprevention.com" class="ac-link" >
-                janine@HarmPreventionSolutions.com</p>
-            </a>
-        <p><strong><i class="fa fa-map-marker" style="margin-right: 12px !important; margin-left: 2px;" aria-hidden="true"></i></i></strong>New Plymouth | Taranaki | New Zealand | 4371</p>
+        <p><span class="label">Phone:</span> <a href="https://wa.me/642040291402" target="_blank">+64 20 402 91402</a></p>
+        <p style="font-size: 12px;">(Available on Whatsapp for International Calls)</p>
+        <p><span class="label">Website:</span> <a href="https://harmpreventionsolutions.com/" target="_blank">HarmPreventionSolutions.com</a></p>
+        <p><span class="label">Email:</span> <a href="mailto:janine@HarmPreventionSolutions.com">janine@HarmPreventionSolutions.com</a></p>
+        <p><span class="label">Address:</span> New Plymouth | Taranaki | New Zealand | 4371</p>
         <div class="buttons">
-          <a href="http://www.linkedin.com/in/janinefulton" class="button">Connect Here with Janine on LinkedIn</a>
-          <a href="https://outlook.office.com/bookwithme/user/a01e5adbc47f4d0c8d4780fc764be81c@harmpreventionsolutions.com/meetingtype/tzejMvxrkUmmEUsI0obH7Q2?anonymous&ep=mlink" class="button">Book a Meeting with Me</a>
+          <a href="http://www.linkedin.com/in/janinefulton" class="button">Connect on LinkedIn</a>
+          <a href="https://outlook.office.com/bookwithme/user/a01e5adbc47f4d0c8d4780fc764be81c@harmpreventionsolutions.com/meetingtype/tzejMvxrkUmmEUsI0obH7Q2?anonymous&ep=mlink" class="button">Book a Meeting</a>
         </div>
       </div>
     </div>
